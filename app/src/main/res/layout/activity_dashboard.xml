@@ -2,18 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="24dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:text="Monitoreo de servidores"
         android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp" />
-
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvTempLabel"
@@ -26,36 +25,71 @@
         android:id="@+id/tvTemperatura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="28.5 °C"
-        android:textSize="36sp"
-        android:textStyle="bold"
         android:textColor="#D32F2F"
-        android:layout_marginBottom="24dp" />
-
+        android:textSize="36sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvEstadoVentilador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Estado de ventilador: ACTIVADO"
+        android:layout_marginBottom="24dp"
+        android:text="Ventilador: OFF"
         android:textSize="18sp"
-        android:textStyle="italic"
-        android:layout_marginBottom="40dp" />
+        android:textStyle="italic" />
 
+    <Button
+        android:id="@+id/btnActualizarTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Leer Sensor (/lectura)" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEncender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="Encender (ON)" />
+
+        <Button
+            android:id="@+id/btnApagar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="Apagar (OFF)" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnProbarAtaque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#C62828"
+        android:text="Probar Firma Adulterada (401)" />
 
     <Button
         android:id="@+id/btnRegistrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar lectura en historial"
-        android:layout_marginBottom="12dp" />
-
+        android:layout_marginBottom="8dp"
+        android:text="Guardar lectura en historial" />
 
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cerrar sesion"
-        android:backgroundTint="#757575" />
+        android:backgroundTint="#757575"
+        android:text="Cerrar sesion" />
 
 </LinearLayout>
